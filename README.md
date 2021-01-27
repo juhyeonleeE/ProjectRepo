@@ -9,11 +9,9 @@
  - eclipse / spring boot / data-jdbc / h2
      
 ## 문제해결 방법
-### 1. 2018년, 2019년 각 연도별 합계 금액이 가장 많은 고객을 추출 
+### 1. 2018년, 2019년 각 연도별 합계 금액이 가장 많은 고객을 추출 <br/> requset URL = http://localhost:8000/firstList
 해결 방식
 쿼리문 이용 - 연도별로 그룹화 한 후, 년도별 합계금액이 가장 높은 고객을 추출 (2018, 2019년도 데이터만 추출)
- - requset URL
- http://localhost:8000/firstList
  - 출력
  ```json
  [
@@ -32,7 +30,7 @@
  ]
  ```
 
-### 2. 2018년 또는 2019년에 거래가 없는 고객을 추출 <br/>    requset URL = http://localhost:8000/secondList 
+### 2. 2018년 또는 2019년에 거래가 없는 고객을 추출 <br/> requset URL = http://localhost:8000/secondList 
 해결 방식
 쿼리문 이용 - 연도별로 그룹화 한 후 거래가 없는 고객을 추출 (2018, 2019년도 데이터만 추출)
   - 출력
@@ -96,7 +94,7 @@
  ]
  ```
  
- ### 3.연도별 관리점별 거래금액 합계를 구하고 합계금액이 큰 순서로 출력 ( requset URL = http://localhost:8000/thirdList ) 
+ ### 3.연도별 관리점별 거래금액 합계를 구하고 합계금액이 큰 순서로 출력 <br/> requset URL = http://localhost:8000/thirdList 
  해결 방식
  쿼리문 이용 - 연도별로 그룹화 한 후 거래금액이 큰 순서로 추출
  서비스 로직 이용 - 쿼리 결과를 연도별로 구조에 맞게 변경 (map, list이용)
@@ -166,7 +164,7 @@
  ]
  ```
  
-### 4. 분당점과 판교점 통폐합하여 판교점으로 이관 지점명을 입력하면 해당 지점에 대한 거래금액 합계를 출력 ( requset URL = http://localhost:8000/fourthList )
+### 4. 분당점과 판교점 통폐합하여 판교점으로 이관 지점명을 입력하면 해당 지점에 대한 거래금액 합계를 출력 <br/> requset URL = http://localhost:8000/fourthList
 해결 방식
 쿼리문 이용 - 분당점의 지점코드/지점이름을 Inline view를 통해 변경, 이후 입력된 관리점 이름에 따른 데이터만 선택 후 출력
 서비스 로직 이용 - 쿼리결과가 없으면 404에러 발생시킨 후, 정해진 json문구로 출력해줌
