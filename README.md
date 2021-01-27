@@ -32,7 +32,7 @@
  ]
  ```
 
-### 2. 2018년 또는 2019년에 거래가 없는 고객을 추출 ( requset URL = http://localhost:8000/secondList ) 
+### 2. 2018년 또는 2019년에 거래가 없는 고객을 추출 <br/>( requset URL = http://localhost:8000/secondList ) 
 해결 방식
 쿼리문 이용 - 연도별로 그룹화 한 후 거래가 없는 고객을 추출 (2018, 2019년도 데이터만 추출)
   - 출력
