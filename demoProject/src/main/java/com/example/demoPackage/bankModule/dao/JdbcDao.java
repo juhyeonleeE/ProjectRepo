@@ -120,8 +120,7 @@ public class JdbcDao implements dao{
 						rs.getString("BRANCH_CODE"),
 						rs.getLong("TOTAL_AMOUNT") ) 
 				);
-		System.out.println("TempList:");
-		System.out.println(TempList);
+		
 		dto singleDto = DataAccessUtils.singleResult(TempList);
 		
 		return singleDto;
