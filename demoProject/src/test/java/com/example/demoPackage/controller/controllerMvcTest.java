@@ -47,7 +47,6 @@ public class controllerMvcTest {
     	.andExpect(jsonPath("$.$.year").value(2018)) // Json property, value 검사
     	.andExpect(content().json( new ObjectMapper().writeValueAsString(senderMap) )); // 동일한 Json 인지 검사
     }
-  //{"year":2018,"name":"테드","acctNo":11111114,"sumAmt":28992000}
     
     @Test
     public void list2Test() throws Exception {

@@ -85,15 +85,10 @@ public class dto {
 		this.brCode = brCode;
 		this.sumAmt = sumAmt;
 	}
-	
-//	public dto(String name) {
-//		this.name = name;
-//	}
 
 	@Override
 	public String toString() {
-		return "dto []";
-//		return "dto [year=" + year + ", name=" + name + "]";
+		return "dto [year=\" + year + \", name=\" + name + \"]";
 	}
 	
 }

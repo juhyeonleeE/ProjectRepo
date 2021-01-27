@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class CommonExceptionHandler {
+	
 	@ExceptionHandler(NotFoundException.class)
     public Map<String, Object> error400(NotFoundException e) {
 		Map<String, Object> result = new HashMap<String, Object>();
@@ -16,15 +17,4 @@ public class CommonExceptionHandler {
         return result;
     }
 	
-//	@ExceptionHandler(NotFoundException.class)
-//    public ResponseEntity<?> error400(NotFoundException e) {
-//        log.error("400 Error : " + catchLog(e));
-//        return ...;
-//    }
-
-//    @ExceptionHandler({RuntimeException.class, Exception.class})
-//    public ResponseEntity<?> error500(Exception e) {
-//        log.error("500 Error : " + catchLog(e));
-//        return ...;
-//    }
 }

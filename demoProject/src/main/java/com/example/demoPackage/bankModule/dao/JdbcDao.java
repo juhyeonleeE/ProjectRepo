@@ -10,7 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.dao.support.DataAccessUtils;
 import com.example.demoPackage.bankModule.dto.dto;
 
-
 @Repository
 public class JdbcDao implements dao{
 	
@@ -124,8 +123,8 @@ public class JdbcDao implements dao{
 		System.out.println("TempList:");
 		System.out.println(TempList);
 		dto singleDto = DataAccessUtils.singleResult(TempList);
-		return singleDto;
 		
+		return singleDto;
 	}
 
 }
