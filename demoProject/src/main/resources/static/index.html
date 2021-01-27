@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com"> <!-- xmlns:th를 설정하지 않으면 에디터에서 경고가 표시되어 신경쓰임 -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+        
+        function chageURL() {
+        	var text = document.getElementById('inputTag').value;
+        	
+				  
+        	var xmlhttp = new XMLHttpRequest();
+        	xmlhttp.onload = function() {
+			  if (xmlhttp.status === 200 || xmlhttp.status === 201) {
+			    console.log(xmlhttp.responseText);
+			    document.getElementById('targetDiv').innerHTML = xmlhttp.responseText;
+			  } else {
+			    console.error(xmlhttp.responseText);
+			  }
+			};
+			
+			var theUrl = "/json-handler";
+			
+			xmlhttp.open("POST", "http://localhost:8000/fourthList");
+			xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			xmlhttp.send(JSON.stringify({ "BrName": text, "response": { "name": "Tester" } }));
+			        	
+        	
+        	
+        }
+        
+</script>
+
+
+<div>
+	<div style="margin: 0px 0px 0px 0px; display: flex">
+	<p style="padding: 0px; margin: 0px;">1) 2018년, 2019년 각 연도별 합계 금액이 가장 많은 고객을 추출하는 API</p>
+	<p style="padding: 0px; margin: 0px 0px 0px 11px;">(단, ‘Y’ 거래는 취소된 거래임, 합계 금액은 거래금액에서 수수료를 차감한 금액)</p>
+	</div>
+	<p style="margin: 10px 0px 0px 300px;">출력</p>
+	<div style="margin: 0px 0px 30px 0px;">
+		<iframe style="width: 650px;" src="http://localhost:8000/firstList"></iframe>
+	</div>
+</div>
+
+<div>
+	<p style="padding: 0px; margin: 0px;">2) 2018년 또는 2019년에 거래가 없는 고객을 추출하는 API</p>
+	<p style="margin: 10px 0px 0px 300px;">출력</p>
+	<div style="margin: 0px 0px 30px 0px;">
+		<iframe style="width: 650px;" src="http://localhost:8000/secondList"></iframe>
+	</div>
+</div>
+
+<div>
+	<div style="margin: 0px 0px 0px 0px; display: flex">
+	<p style="padding: 0px; margin: 0px;">3) 연도별 관리점별 거래금액 합계를 구하고 합계금액이 큰 순서로 출력하는 API</p>
+	<p style="padding: 0px; margin: 0px 0px 0px 11px;">(‘Y’ 거래는 취소된 거래)</p>
+	</div>
+	<p style="margin: 10px 0px 0px 300px;">출력</p>
+	<div style="margin: 0px 0px 30px 0px;">
+		<iframe style="width: 650px; height: 180px" src="http://localhost:8000/thirdList"></iframe>
+	</div>
+</div>
+
+<div>
+	<div style="margin: 0px 0px 0px 0px; display: flex">
+	<p style="padding: 0px; margin: 0px;">4) 분당점과 판교점을 통폐합하여 판교점으로 관리점 이관을 하였습니다. 지점명을 입력하면 해당지점의 거래금액 합계를 출력하는 API</p>
+	<p style="padding: 0px; margin: 0px 0px 0px 11px;">(‘Y’ 거래는 취소된 거래)</p>
+	</div>
+	
+	<p style="margin: 10px 0px 0px 300px;">입력</p>
+	<div style="margin: 0px 0px 0px 0px; display: flex">
+		<form style="margin: 0px 0px 0px 118px; width: 300px">
+		BranchName : <input id="inputTag" type="text" />
+		</form>
+		<button onClick="chageURL()" style="margin: 0px 0px 0px 5px;" >검색</button>
+	</div>
+	<p style="margin: 10px 0px 0px 300px;">출력</p>
+	<div id="targetDiv" style="margin: 5px 0px 0px 111px;">
+	</div>
+</div>
+</body>
+</html>
