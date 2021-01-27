@@ -6,18 +6,10 @@
  - [빌드 및 실행방법](#빌드-및-실행방법)
  
 ## 개발 프레임워크 및 데이터베이스
- - 스프링 부트
- - data-jdbc
- - lombok
- - h2 db
- 
-## 빌드 및 실행방법
- - git clone(https://github.com/leeikjeun/kakaopaysec.git)
- - gradle build
- - TestApplication실행
+ - eclipse / spring boot / data-jdbc / h2
      
 ## 문제해결 방법
-### 1. 2018,2019년도별 합계 금액이 가장 많은 고객 추출
+### 1. 2018년, 2019년 각 연도별 합계 금액이 가장 많은 고객을 추출 / http://localhost:8000/firstList
  - requset
  ```
  http:localhost:8080/solution1
@@ -232,4 +224,7 @@
  - jdbcTemplate에서 관리점이름을 받아 리턴
  - 서비스에서 jdbcTemplate의 결과를 받아 데이터가 없으면 에러를 던지고 아닐경우 정상 데이터 세팅후 리턴
  
- 
+ ## 빌드 및 실행방법
+ - git clone(https://github.com/leeikjeun/kakaopaysec.git)
+ - gradle build
+ - TestApplication실행
