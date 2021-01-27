@@ -196,4 +196,4 @@
  - 이클립스에서 https://github.com/juhyeonleeE/ProjectRepo.git 에서 clone ⇒ maven build (build창에 존재하는 pom.xml제거) ⇒ DemoProjectApplication.java를 "Spring Boot App"으로 실행
  - https://drive.google.com/drive/u/1/folders/1lSK4k0iZQG-vwOeBbq-TL5YxO575C3L1 에서 KakaoProject.zip 파일 다운로드 및 압축풀기 ⇒ 이클립스에서 Project를 Import ⇒ maven build (build창에 존재하는 pom.xml제거) ⇒ DemoProjectApplication.java를 "Spring Boot App"으로 실행
  <br/>
- <br/> maven과 Spring Boot App 잘 작동되지 못하는 경우가 있습니다. 여러번 시도하면 해결되었습니다.
+ maven과 Spring Boot App 잘 작동되지 못하는 경우가 있습니다. 여러번 시도하면 해결되었습니다.
